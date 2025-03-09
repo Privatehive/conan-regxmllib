@@ -1,0 +1,13 @@
+{
+    "version": "1.1.5",
+    "projectName": "regxmllib",
+    "projectDescription": "regxmllib is a collection of tools and libraries for the creation of RegXML (SMPTE ST 2001-1) representations of MXF header metadata (SMPTE ST 377-1)",
+    "vendor": "Björn Stresing",
+    "contact": "bjoern.stresing@gmx.de",
+    "domain": "de.privatehive",
+    "copyrightYear": "2024",
+    "repository": "https://github.com/Privatehive/conan-regxmllib",
+    "topics": ["IMF"],
+    "homepage": "https://github.com/sandflow/regxmllib",
+    "license": "BSD"
+  }
