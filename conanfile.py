@@ -1,37 +1,29 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
-import re
 from conan import ConanFile
 from conan.tools.files import get
 from conan.errors import ConanInvalidConfiguration
 from conan.tools.cmake import CMake, CMakeToolchain, CMakeDeps
 from conan.tools.env import VirtualBuildEnv
-import json
 
 required_conan_version = ">=2.0"
 
-
 class RegxmlLibConan(ConanFile):
 
-    jsonInfo = json.load(open("info.json", 'r'))
     # ---Package reference---
-    name = jsonInfo["projectName"]
-    version = jsonInfo["version"]
-    user = jsonInfo["domain"]
+    name = "regxmllib"
+    version = "1.1.5"
+    user = "imftool"
     channel = "stable"
     # ---Metadata---
-    description = jsonInfo["projectDescription"]
-    license = jsonInfo["license"]
-    author = jsonInfo["vendor"]
-    topics = jsonInfo["topics"]
-    homepage = jsonInfo["homepage"]
-    url = jsonInfo["repository"]
+    description = "regxmllib is a collection of tools and libraries for the creation of RegXML (SMPTE ST 2001-1) representations of MXF header metadata (SMPTE ST 377-1)"
+    license = "BSD"
     # ---Requirements---
     requires = []
     tool_requires = ["cmake/[>=3.21.1]", "ninja/[>=1.11.1]"]
     # ---Sources---
-    exports = ["info.json"]
+    exports = []
     exports_sources = []
     # ---Binary model---
     settings = "os", "compiler", "build_type", "arch"
